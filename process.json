@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "name": "indexation",
+      "script": "worker.js",
+      "instances": 6,
+      "exec_mode": "cluster",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "env_production": {
+        "NODE_ENV": "production",
+        "TOTAL_WORKERS": 5 
+      },
+      "instance_var": "WORKER_ID" 
+    }
+  ]
+}
